@@ -28,7 +28,7 @@ export default {
 <style>
 .sort{
   font-family: 'Monoton', cursive;
-  font-size: 45px;
+  /*font-size: 45px;*/
   font-weight: normal;
 }
 </style>

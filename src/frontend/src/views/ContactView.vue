@@ -7,7 +7,7 @@
   <section class="introduction-section">
 
 
-    <img class="float-" src="/src/main/resources/static/images/dogandme.jpg" width="150" height="100" alt="">
+    <img class="float-" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcwu1kR%2FbtqZUWqCwQ6%2FIv1isDN8uFi66G6yIzmVEk%2Fimg.jpg" width="150" height="100" alt="">
     <h1>Introduction</h1>
     <hr class="my-2">
     <p>요리사였고 지금은 백엔드 프로그래머인 황경욱(UGO) 입니다. </p>
@@ -25,7 +25,7 @@
     <h2>사는곳</h2>
     <p>경기도 양주시에 거주 중이며 일 구하면 바로이사</p>
     <h2>개발자가 되고 싶은 이유</h2>
-    <p>엄청난 목표보다는 재미를 느끼고, 이것으로 해내고 싶은 것이 생겼기 때문에</p>
+    <p>엄청난 목표보다는 재미를 느끼고, 이것으로 해보고 싶은 것들이 계속 생겨난다는 것이 가장 큰 이유인 것 같다.</p>
     <h2>사용기술</h2>
     <pre class="jumbotron">
       <strong class="text-primary">Language</strong>
@@ -60,7 +60,7 @@
 
       <strong class="text-primary">DataBase</strong>
 
-      [Oracle Database] [Postgre Database] [H2 Database]
+      [Oracle Database] [Maria DB] [H2 Database]
 
       * 프로젝트 요구사항에 따른 데이터 모델링과 쿼리 작성 가능
 
@@ -88,6 +88,14 @@
       [JUNIT]
 
        *JUNIT을 통한 테스트 코드 작성법 숙지
+
+      <strong class="text-primary">배포</strong>
+
+      [AWS EC2 , AWS RDS ]
+
+       * AWS EC2 와 RDS를 활용하여 스프링 부트 + Vue.js + JPA
+        애플리케이션 배포 경험 (Domain, https 인증서 적용)
+
     </pre>
   </section>
 </template>
@@ -111,13 +119,6 @@ body {
 .masthead-heading,
 .masthead-intro {
   text-align: center;
-}
-
-.masthead {
-  padding: 6em 0;
-  background-image: url("/src/main/resources/static/images/hugeandme.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .masthead-intro {
@@ -190,7 +191,7 @@ section > h1 {
 
 .masthead {
   padding: 6em 0;
-  background-image: url('/src/frontend/src/components/hugeandme.jpg');
+  background-image: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrMfTt%2FbtqZV58tZbi%2FKka87ElFpPHuk7DjbZLqhK%2Fimg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }

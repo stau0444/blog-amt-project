@@ -40,7 +40,7 @@ public class ContentController {
     }
 
     private Map<String, Object> checkIp() {
-        String adminIP="127.0.0.1";
+        String adminIP="172.31.46.77";
         String requsetIp = null;
         HttpServletRequest request =
                 ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();

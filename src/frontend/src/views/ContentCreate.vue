@@ -36,7 +36,7 @@
           </div>
           <div class="my-5">
             <label for="nowImg" class="badge badge-info my-5 mr-5">썸네일 이미지</label>
-            <img id="nowImg" :src="this.nowImg" >
+            <img id="nowImg" :src="this.nowImg" class="form-control" >
           </div>
           <div class="input-group">
             <input type="file" class="form-control" accept="image/png,image/jpeg" id="thumbnail" @change="handleImage">
@@ -53,14 +53,11 @@
               <li><small>파일 확장자 : png,jpg</small></li>
             </ul>
           </div>
-
           <div class="form-group">
             <QuillEditor></QuillEditor>
           </div>
-
         </form>
       </div>
-
     </main>
   </div>
 
