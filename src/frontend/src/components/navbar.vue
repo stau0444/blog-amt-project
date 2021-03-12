@@ -61,6 +61,9 @@ export default {
       if(this.keyword == "stau04"){
         this.isAdmin = true;
       }
+      if(this.keyword == "stau0444"){
+        this.isAdmin = false;
+      }
       this.$router.push({path:'/content/search',query:{keyword:this.keyword,sort:this.sort}});
     }
   }
