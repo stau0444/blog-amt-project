@@ -158,6 +158,14 @@ img{
   bottom: 155px;
   border-radius: 150px;
 }
+@media only screen and (max-width: 376px) {
+  img{
+    height: 160px;
+    bottom: 210px;
+    border-radius: 100px;
+  }
+
+}
 
 pre,
 .introduction-section > p,

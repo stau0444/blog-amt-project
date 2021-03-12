@@ -1,7 +1,7 @@
 <template>
   <div class="col-md-6">
     <p>Latest</p>
-    <ol>
+    <ol class="text-left">
       <a class="rankLink" @click="contentDetailForm(latestContent.id)" :key="l" v-for="(latestContent,l) in latestRank" style="cursor: pointer">
         <li >{{latestContent.title}}</li>
       </a>
@@ -9,7 +9,7 @@
   </div>
   <div class="col-md-6" id="popContentList">
     <p>Best</p>
-    <ol>
+    <ol class="text-left">
       <a class="rankLink" @click="contentDetailForm(popContent.id)" :key="p" v-for="(popContent,p) in popRank" style="cursor: pointer">
         <li>{{popContent.title}}</li>
       </a>

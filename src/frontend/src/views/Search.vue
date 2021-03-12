@@ -127,6 +127,14 @@ export default {
   font-size: 50px;
   margin : 40px 0 40px 0 ;
 }
+@media only screen and (max-width: 584px) {
+  .searchKeyword{
+    color: #42b983;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 28px;
+    margin : 40px 0 40px 0 ;
+  }
+}
 .card{
   height: 100%;
   margin: 5px 0px 5px 0px;

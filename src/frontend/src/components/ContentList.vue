@@ -22,13 +22,14 @@
       </a>
     </div>
   </div>
-  <div class="row justify-content-center mt-4">
+  <div class="pagnt row justify-content-center mt-4">
     <VueTailwindPagination
         :current="current"
         :total="total"
         :per-page="perPage"
         @page-changed="current = $event"
-        @click="getContentList"/>
+        @click="getContentList"
+    />
   </div>
 </template>
 
@@ -49,10 +50,15 @@ export default {
   },
   mounted() {
 
+    this.resizePagenationUI();
+  },
+  beforeCreate() {
+
   }
   ,
   created(){
     this.getContentList();
+
   },
   updated() {
 
@@ -71,11 +77,24 @@ export default {
     ContentDetail(content_id){
       this.$router.push({path:'/content/detail',query:{content_id:content_id}});
     },
-
+    resizePagenationUI() {
+      const b = document.querySelectorAll('div.flex.items-center')[0];
+      if(window.innerWidth<575) {
+        b.classList.add("d-none")
+      }
+      window.addEventListener("resize",function (){
+        if(window.innerWidth<575) {
+          b.classList.add("d-none")
+        }else {
+          b.classList.remove("d-none")
+        }
+      });
+    }
   },
-  components:{
+  components: {
     VueTailwindPagination
-  }
+  },
+
 }
 </script>
 
@@ -126,5 +145,8 @@ export default {
   box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
   top: -6px;
   background-color: #e9ecef;
+}
+div .flex items-center{
+  display: none;
 }
 </style>

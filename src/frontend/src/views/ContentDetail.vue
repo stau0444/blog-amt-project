@@ -9,11 +9,11 @@
               <div class="blog-post">
                 <h2 class="blog-post-title my-3" >
                   <span class="title">{{contentDetailForm.title}}</span>
-                  <span class="ml-5"><a href="#" class="btn btn-outline-primary btn-sm">조회수 {{contentDetailForm.view_count}}</a></span>
+                  <span class="ml-5"><a class="btn btn-outline-primary btn-sm">조회수 {{contentDetailForm.view_count}}</a></span>
                 </h2>
                 <hr>
                 <p class="blog-post-meta  my-3">
-                  <span class="badge badge-info mr-3">등록일</span>
+                  <span class="badge badge-info mr-3" @click="addAdmin">등록일</span>
                   <span>{{contentDetailForm.created_date}}</span>
                 </p>
                 <hr>
@@ -30,14 +30,16 @@
                 <p >{{contentDetailForm.content}}</p>
               </article><!-- /.blog-post -->
               <nav class="blog-pagination my-4 float-right" aria-label="Pagination">
-                <router-link v-if="isAdmin" class="btn btn-outline-primary mr-3" :to="{name:'ContentUpdate',params:{content_id:this.content_id}}">수정</router-link>
+                <router-link v-if="isAdmin" class="btn btn-outline-primary mr-3" :to="{name:'ContentUpdate',query:{content_id:this.content_id}}">수정</router-link>
                 <a v-if="isAdmin" class="btn btn-outline-success" @click="deleteContent()" >삭제</a>
               </nav>
+
             </div>
       </div>
     </div>
   </main>
 </template>
+
 <script>
 import RankList from "@/components/RankList";
 import axios from "axios";
@@ -75,6 +77,9 @@ export default{
             console.log(resp.data.content);
             this.contentDetailForm = resp.data;
           });
+    },
+    addAdmin(){
+      this.isAdmin = true;
     },
     deleteContent(){
 

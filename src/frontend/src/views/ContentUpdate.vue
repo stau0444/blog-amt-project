@@ -102,7 +102,7 @@ export default {
       this.value.push(tag)
     },
     getData(){
-      this.content_id= this.$route.params.content_id
+      this.content_id= this.$route.query.content_id
       axios.get("/api/content/update/"+this.content_id).then(resp =>{
         console.log(resp);
         this.nowImg = resp.data.thumbnailImg;
