@@ -110,4 +110,18 @@ ol ol li::before {
 #popContentList{
   border-left: 1px solid #aaaaaa;
 }
+@media only screen and (max-width: 768px) {
+  #popContentList {
+    border-left: 0;
+    border-top:1px solid #aaaaaa;
+    margin: 10px 0;
+    padding-top: 10px;
+  }
+  .masthead-heading {
+    font-size: 3em;
+  }
+  .content-footer {
+    padding: 2em 2.5em;
+  }
+}
 </style>
