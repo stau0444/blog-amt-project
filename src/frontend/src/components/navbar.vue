@@ -35,7 +35,6 @@
 <script>
 
 
-//import axios from "axios";
 
 //import axios from "axios";
 
@@ -84,6 +83,14 @@ a.navbar-brand{
   padding: 0 10px;
   border-radius: 10px;
   margin-right: 0;
+}
+@media only screen and (max-width: 376px) {
+  a.navbar-brand{
+    font-size: 20px;
+  }
+  .navbar-toggler {
+    margin-left: 10px;
+  }
 }
 a.navbar-brand:hover{
   color: greenyellow;
