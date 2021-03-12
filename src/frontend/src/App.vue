@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-light">
+  <div id="wrap" class="bg-light">
     <Navbar/>
     <div id="router-view-outer">
-      <router-view/>
+      <router-view class="container"/>
     </div>
     <Footer/>
   </div>
@@ -23,6 +23,11 @@ export default {
     //   window.console.log('statusCode:',response && response.statusCode);
     //   window.console.log('body:',body);
     // });
+    const windowSize = window.innerWidth;
+    if(windowSize<375){
+      document.getElementById("wrap").className="bg-light container"
+    }
+
   },
 }
 </script>

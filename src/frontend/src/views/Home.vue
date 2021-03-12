@@ -6,7 +6,7 @@
         </div>
         <hr>
         <div class="text-center my-3">
-          <h2 class="sort">development</h2>
+          <h2 class="sort my-2">dev study</h2>
         </div>
           <ContentList></ContentList>
       </div>
@@ -28,7 +28,8 @@ export default {
 <style>
 .sort{
   font-family: 'Monoton', cursive;
-  /*font-size: 45px;*/
+  font-size: 45px;
   font-weight: normal;
 }
+
 </style>
