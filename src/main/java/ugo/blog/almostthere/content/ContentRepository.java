@@ -15,7 +15,7 @@ public interface ContentRepository extends JpaRepository<Content,Long>,ContentRe
     List<Content> findTop5byViewCount();
 
 
-    @Query(value = "select * from(select * , rank() over(order by created_date desc) as ranking from content)as t where t.ranking <=5"
+    @Query(value = "select * from(select * , rank() over(order by created_date desc) as ranking from content)as t where t.ranking <5"
             ,nativeQuery = true)
     List<Content> findTop5byCreatedData();
 
