@@ -1,6 +1,6 @@
 # Almost-there (blog-project)
 
-Spring-boot  JPA/Hiberante  Vue.js  AWS-RDS(MariaDB)  AWS-EC2(Ubuntu)를 활용하여 만든 블로그 입니다.
+Spring-boot  JPA/Hiberante  Vue.js  AWS-RDS(MariaDB)  AWS-EC2(Ubuntu)를 활용하여 만든 블로그 입니다.    
 *해당 프로젝트는 포트폴리오 사이트이며 앞으로 기능을 하나하나 붙혀 나갈 계획입니다.    
 
 
