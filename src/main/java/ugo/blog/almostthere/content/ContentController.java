@@ -71,8 +71,6 @@ public class ContentController {
 
     @GetMapping("/api/content/list")
     public Page<ContentDetailForm> getList(Pageable pageable,String path){
-
-        System.out.println(path);
         ContentSort sort;
         if(path.equals("/")){
             sort = ContentSort.SUMMARY;

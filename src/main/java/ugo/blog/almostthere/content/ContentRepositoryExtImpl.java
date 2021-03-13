@@ -34,7 +34,6 @@ public class ContentRepositoryExtImpl extends QuerydslRepositorySupport implemen
                         .where(content.contentSort.eq(sort))
                         .leftJoin(content.tags, tag)
                         .orderBy(content.created_date.desc())
-                        //.fetchJoin()
                         .distinct();
 
         JPQLQuery<Content> pageableQuery = getQuerydsl().applyPagination(pageable, query);
@@ -56,7 +55,6 @@ public class ContentRepositoryExtImpl extends QuerydslRepositorySupport implemen
                         .or(content.tags.any().tagName.containsIgnoreCase(keyword)))
                         .orderBy(content.created_date.desc())
                         .leftJoin(content.tags, tag)
-                        //.fetchJoin()
                         .distinct();
 
         JPQLQuery<Content> pageableQuery = getQuerydsl().applyPagination(pageable,query);
