@@ -11,12 +11,12 @@ import java.util.List;
 public interface ContentRepository extends JpaRepository<Content,Long>,ContentRepositoryExt {
 
 
-    @Query(value = "select * from(select * , rank() over(order by view_count desc) as ranking from content)as t where t.ranking <=5 limit 5"
+    @Query(value = "select * from(select * , rank() over(order by view_count desc) as ranking from content)as t where t.ranking <=5 order by t.ranking asc"
             ,nativeQuery = true)
     List<Content> findTop5byViewCount();
 
 
-    @Query(value = "select * from(select * , rank() over(order by created_date desc) as ranking from content)as t where t.ranking <=5"
+    @Query(value = "select * from(select * , rank() over(order by created_date desc) as ranking from content)as t where t.ranking <=5 order by t.ranking asc"
             ,nativeQuery = true)
     List<Content> findTop5byCreatedData();
 

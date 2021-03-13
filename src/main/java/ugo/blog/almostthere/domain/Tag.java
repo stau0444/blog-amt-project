@@ -19,7 +19,7 @@ public class Tag {
 
     private String tagName;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany
     Set<Content> contents = new HashSet<>();
 
     public Tag(String tagTitle) {
