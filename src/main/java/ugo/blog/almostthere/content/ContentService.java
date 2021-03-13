@@ -45,7 +45,7 @@ public class ContentService{
                 .created_date(LocalDateTime.now())
                 .build();
         
-        tags.stream().map(tag -> tag.getContents().add(newContent));
+        tags.stream().forEach(tag -> tag.getContents().add(newContent));
         contentRepository.save(newContent);
     }
 

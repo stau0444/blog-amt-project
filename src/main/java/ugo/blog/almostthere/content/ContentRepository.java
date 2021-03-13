@@ -10,6 +10,7 @@ import java.util.List;
 @Transactional(readOnly = true)
 public interface ContentRepository extends JpaRepository<Content,Long>,ContentRepositoryExt {
 
+
     @Query(value = "select * from(select * , rank() over(order by view_count desc) as ranking from content)as t where t.ranking <=5 limit 5"
             ,nativeQuery = true)
     List<Content> findTop5byViewCount();

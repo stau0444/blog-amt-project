@@ -10,4 +10,5 @@ import ugo.blog.almostthere.domain.ContentSort;
 public interface ContentRepositoryExt {
     Page<Content> findByKeyword(String keyword, Pageable pageable);
     Page<Content> findAllBySort(Pageable pageable,  ContentSort sort);
+    Page<Content> findByQueryFactory(Pageable pageable , ContentSort sort);
 }
