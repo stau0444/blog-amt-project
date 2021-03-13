@@ -37,7 +37,6 @@ export default {
     async getPopRank(){
       let popRank = await  this.$api('/api/content/pop_rank');
       this.popRank = popRank;
-
     },
     async getLatestRank(){
       let latestRank = await  this.$api('/api/content/latest_rank');
