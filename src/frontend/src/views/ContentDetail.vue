@@ -18,7 +18,7 @@
                 </p>
                 <hr>
                 <div class="my-3 d-flex">
-                  <span class="mr-3 badge badge-info">태그</span>
+                  <span class="mr-3 badge badge-info" @click="isEditorble=false">태그</span>
                   <p>
                     <span class="badge badge-success mr-2" :key="t" v-for="(tag,t) in contentDetailForm.tags">
                       {{tag.tagName}}</span>
@@ -30,8 +30,8 @@
                 <p >{{contentDetailForm.content}}</p>
               </article><!-- /.blog-post -->
               <nav class="blog-pagination my-4 float-right" aria-label="Pagination">
-                <router-link v-if="isAdmin" class="btn btn-outline-primary mr-3" :to="{name:'ContentUpdate',query:{content_id:this.content_id}}">수정</router-link>
-                <a v-if="isAdmin" class="btn btn-outline-success" @click="deleteContent()" >삭제</a>
+                <router-link v-if="isEditorble" class="btn btn-outline-primary mr-3" :to="{name:'ContentUpdate',query:{content_id:this.content_id}}">수정</router-link>
+                <a v-if="isEditorble" class="btn btn-outline-success" @click="deleteContent()" >삭제</a>
               </nav>
 
             </div>
@@ -50,14 +50,14 @@ export default{
       content_id: 0,
       contentDetailForm: [],
       datetime: '',
-      isAdmin:false,
+      isEditorble:false,
     }
   },
   mounted() {
-    axios.get("/api/checkIp").then(resp => {
-      this.isAdmin = resp.data.isAdmin;
-      console.log("this.isAdmin"+this.isAdmin)
-    })
+    // axios.get("/api/checkIp").then(resp => {
+    //   this.isAdmin = resp.data.isAdmin;
+    //   console.log("this.isAdmin"+this.isAdmin)
+    // })
   },
   created(){
     this.content_id = this.$route.query.content_id;
@@ -79,7 +79,7 @@ export default{
           });
     },
     addAdmin(){
-      this.isAdmin = true;
+      this.isEditorble = true;
     },
     deleteContent(){
 
