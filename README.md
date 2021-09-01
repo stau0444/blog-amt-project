@@ -4,7 +4,7 @@
 
 -현재 AWS EC2 인스턴스에서 구동 중인 상태이며 아래 URL에서 사이트를 확인할 수 있습니다.
   
-  https://www.blog-almostthere.com
+  https://www.blog-almostthere.com (*2021/09 현재 서버 내림)
 
 
 ###### *해당 프로젝트는 포트폴리오 사이트이며 현재 기본적인 CRUD만 구현 되있으며 앞으로 기능을 하나하나 붙혀 나갈 계획입니다.    
